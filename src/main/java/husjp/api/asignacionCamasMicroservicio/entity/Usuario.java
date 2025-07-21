@@ -20,19 +20,6 @@ public class Usuario {
     private String documento;
     @Column(name = "nombre_completo")
     private String nombreCompleto;
-    @Column(name = "fecha_nacimiento")
-    private LocalDate fechaNacimiento;
-    private String nombres;
-    private String apellidos;
-    private String password;
-    private Boolean estado;
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "usuarios_roles",
-            joinColumns = @JoinColumn(name = "id_persona"),
-            inverseJoinColumns = @JoinColumn(name = "rol_id")
-    )
-    private Set<Rol> roles;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "servicios_usuarios",

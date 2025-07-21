@@ -19,7 +19,7 @@ public class Cama {
     @JoinColumn(name = "servicio_id", foreignKey = @ForeignKey(name = "FK_cama_servicio"))
     private Servicio servicio;
     @ManyToOne
-    @JoinColumn(name = "subsecion_servicio_id", foreignKey = @ForeignKey(name = "FK_cama_subSeccionServicio"))
+    @JoinColumn(name = "subseccion_servicio_id", foreignKey = @ForeignKey(name = "FK_cama_subSeccionServicio"))
     private SubSeccionesServicio subseccion;
     @ManyToOne
     @JoinColumn(name = "cama_estado_id", foreignKey = @ForeignKey(name = "FK_cama_estadoCama"), nullable = false)

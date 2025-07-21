@@ -3,6 +3,7 @@ package husjp.api.asignacionCamasMicroservicio.controllers;
 import husjp.api.asignacionCamasMicroservicio.service.EjemploService;
 import husjp.api.asignacionCamasMicroservicio.service.dto.EjemploDTO;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@SecurityRequirement(name = "Bearer Authentication")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/ejemplo")
-@CrossOrigin(origins = {"http://localhost:5173","http://optimus:5173"})
 public class EjemploController {
 
     private EjemploService ejemploService;

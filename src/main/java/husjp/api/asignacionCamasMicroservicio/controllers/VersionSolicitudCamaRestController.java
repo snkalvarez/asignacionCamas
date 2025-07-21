@@ -5,6 +5,7 @@ import husjp.api.asignacionCamasMicroservicio.service.dto.request.VersionSolicit
 import husjp.api.asignacionCamasMicroservicio.service.dto.request.VersionSolicitudCamaEditDTO;
 import husjp.api.asignacionCamasMicroservicio.service.dto.response.VersionSolicitudResDTO;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +14,10 @@ import org.springframework.web.bind.annotation.*;
 import java.security.Principal;
 import java.util.List;
 
+@SecurityRequirement(name = "Bearer Authentication")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/versionSolicitudCama")
-@CrossOrigin(origins = {"http://localhost:5173","http://optimus:5173","http://192.168.18.164:5173"})
 public class VersionSolicitudCamaRestController {
 
     private VersionSolicitudCamaService versionSolicitudCamaService;

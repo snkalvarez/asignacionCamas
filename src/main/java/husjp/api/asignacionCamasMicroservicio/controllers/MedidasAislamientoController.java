@@ -2,6 +2,7 @@ package husjp.api.asignacionCamasMicroservicio.controllers;
 
 import husjp.api.asignacionCamasMicroservicio.service.MedidasAislamientoService;
 import husjp.api.asignacionCamasMicroservicio.service.dto.response.MedidasAislamientoResDTO;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -11,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@SecurityRequirement(name = "Bearer Authentication")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/medidasAislamiento")
-@CrossOrigin(origins = {"http://localhost:5173", "http://optimus:5173"})
 public class MedidasAislamientoController {
 
     private MedidasAislamientoService medidasAislamientoService;
