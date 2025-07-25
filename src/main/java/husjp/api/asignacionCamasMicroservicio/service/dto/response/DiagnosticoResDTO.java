@@ -1,8 +1,10 @@
 package husjp.api.asignacionCamasMicroservicio.service.dto.response;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class DiagnosticoResDTO {
 
     private String id;

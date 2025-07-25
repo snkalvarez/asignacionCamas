@@ -1,8 +1,10 @@
 package husjp.api.asignacionCamasMicroservicio.service.dto.request;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class MedidasAislamientoReqDTO {
 
     private Integer id;

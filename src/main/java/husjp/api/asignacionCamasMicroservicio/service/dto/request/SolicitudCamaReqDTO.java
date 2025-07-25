@@ -2,7 +2,8 @@ package husjp.api.asignacionCamasMicroservicio.service.dto.request;
 
 import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class SolicitudCamaReqDTO {

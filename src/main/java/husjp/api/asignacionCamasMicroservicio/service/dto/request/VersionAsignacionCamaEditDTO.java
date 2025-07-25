@@ -1,12 +1,14 @@
 package husjp.api.asignacionCamasMicroservicio.service.dto.request;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class VersionAsignacionCamaEditDTO {
 
     private CamaReqDTO cama;
