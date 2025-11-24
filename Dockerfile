@@ -1,4 +1,4 @@
-FROM openjdk:21
+FROM eclipse-temurin:21
 
 # Crea un directorio temporal
 VOLUME /tmp
